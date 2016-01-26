@@ -1,0 +1,4 @@
+WLST
+
+${ServerHome}/common/bin/wlst.sh /home/carol/WLST/XXX.py
+/home/carol/oracle/middleware1036/wlserver_10.3/common/bin/wlst.sh /home/carol/repository/git-krol/docker_oracle-SOA-11g/weblogic1036-OSB-domain/config/osb_domain.py

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Silent installer option: -mode=silent -silent_xml=/home/me/silent.xml 
+Example: ./oepe-wls-indigo-installer-11.1.1.8.0.201110211138-10.3.6-linux32.bin -mode=silent -silent_xml=/oracle/install/11.1.1.7/oepe-silent.xml -log=/oracle/install/11.1.1.7/oepe-silent.xml.log
+-->
+<bea-installer> 
+     <input-fields>
+       <data-value name="BEAHOME" value="/u01/oracle/middleware1036" />
+       <data-value name="WLS_INSTALL_DIR" value="/u01/oracle/middleware1036/wlserver_10.3" />
+       <data-value name="COMPONENT_PATHS"
+        value="WebLogic Server/Core Application Server|WebLogic Server/Administration Console|WebLogic Server/Configuration Wizard and Upgrade Framework|WebLogic Server/Web 2.0 HTTP Pub-Sub Server|WebLogic Server/WebLogic JDBC Drivers|WebLogic Server/Third Party JDBC Drivers|WebLogic Server/WebLogic Server Clients|WebLogic Server/WebLogic Web Server Plugins|WebLogic Server/UDDI and Xquery Support|Oracle Coherence/Coherence Product Files" />
+       <data-value name="INSTALL_NODE_MANAGER_SERVICE" value="yes" />
+       <data-value name="NODEMGR_PORT" value="5559" />
+       <data-value name="INSTALL_SHORTCUT_IN_ALL_USERS_FOLDER" value="yes"/>
+    <!--
+    <data-value name="LOCAL_JVMS" value="D:\jrockit_160_05|D:\jdk160_11"/>
+    --> 
+   </input-fields> 
+</bea-installer>
