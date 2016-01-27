@@ -1,5 +1,4 @@
 FROM krol/weblogic1036
-
 # Maintainer
 # ----------
 MAINTAINER Carolina Guillen <guillen.carolina@gmail.com>
@@ -14,6 +13,7 @@ ADD config/* $INSTALL_OSB/
 WORKDIR $INSTALL_OSB
 
 USER root
+#RUN mkdir /u01/oracle/weblogic/osb
 RUN unzip $INSTALL_OSB/$OSB_ZIP
 RUN chown -R oracle $INSTALL_OSB
 RUN cp $INSTALL_OSB/oraInst.loc /etc/
@@ -21,9 +21,9 @@ RUN cp $INSTALL_OSB/oraInst.loc /etc/
 
 USER oracle
 #RUN mkdir /u01/oracle/weblogic/oepe
-RUN sh Disk1/runInstaller -silent -responseFile $INSTALL_OSB/response_OSB.rsp -jreLoc $JVM
+RUN sh Disk1/runInstaller -silent -responseFile /u01/install/response_OSB.rsp -jreLoc /usr/java/jdk1.7.0_80
 
-RUN sh Disk1/runInstaller -silent -responseFile $INSTALL_OSB/response_OSB.rsp -jreLoc $JVM
+#RUN sh Disk1/runInstaller -silent -responseFile $INSTALL_OSB/response_OSB.rsp -jreLoc $JVM
 
 #clean: Oracle Universal Installer from /tmp/OraInstall
-RUN rm -rf $INSTALL_OSB/*
+#RUN rm -rf $INSTALL_OSB/*
