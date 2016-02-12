@@ -11,7 +11,7 @@ ENV ADMIN_PORT 7001
 ENV NM_PORT 5556
 ENV USER_MEM_ARGS -Xms256m -Xmx512m -XX:MaxPermSize=1024m
 ENV EXTRA_JAVA_PROPERTIES $EXTRA_JAVA_PROPERTIES -Djava.security.egd=file:///dev/urandom
-
+#ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 ENV INSTALL_OSB /u01/install
 ADD config/* $INSTALL_OSB/
 

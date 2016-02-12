@@ -5,7 +5,7 @@ admin_pass = os.environ.get("ADMIN_PASSWORD", "welcome1")
 
 # Open default domain template
 # ======================
-readTemplate("/u01/oracle/weblogic/wlserver_10.3/common/templates/domains/wls.jar")
+readTemplate("/u01/oracle/middleware1036/wlserver_10.3/common/templates/domains/wls.jar")
 
 # Configure the Administration Server and SSL port.
 # =========================================================
@@ -25,7 +25,7 @@ cmo.setPassword(admin_pass)
 setOption('OverwriteDomain', 'true')
 setOption('ServerStartMode','prod')
 
-domain_path = '/u01/oracle/weblogic/user_projects/domains/base_domain'
+domain_path = '/u01/oracle/middleware1036/user_projects/domains/base_domain'
 
 writeDomain(domain_path)
 closeTemplate()

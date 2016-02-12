@@ -4,6 +4,9 @@ docker build -t krol/weblogic1036-domain .
 #run the image
 docker run --rm=true -it -p 7001:7001 krol/weblogic1036-domain startWebLogic.sh
 
+#run the image
+docker run --rm=true -it krol/weblogic1036-domain /bin/bash
+
 #teste the image
 http://localhost:7001/console/login/LoginForm.jsp
 
